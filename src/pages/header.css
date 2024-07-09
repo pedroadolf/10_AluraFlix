@@ -1,0 +1,97 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 0;
+    z-index: 1000 !important;
+    background: transparent;
+}
+
+.menu {
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+    padding: 10px 15px;
+}
+
+.userItems {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.userItems .icon {
+    position: relative;
+    color: cornflowerblue;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15), 5px 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.userItems .icon .like,
+.userItems .icon .bag {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    height: 20px;
+    width: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    background: var(--second);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userItems .avatar {
+    padding: 10px 20px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15), 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.userItems .avatar img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.userItems .avatar button {
+    color: red;
+    font-size: 1.8rem;
+}
+
+.userItems .avatar .user {
+    display: flex;
+    flex-direction: column;
+}
+
+.userItems .avatar .user span {
+    text-decoration: none;
+    font-size: 0.6rem;
+    color: white;
+    text-align: center;
+}
+
+.userItems .avatar .user button {
+    text-decoration: none;
+    font-size: 0.6rem;
+}

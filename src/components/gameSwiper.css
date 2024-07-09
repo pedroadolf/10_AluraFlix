@@ -1,0 +1,146 @@
+.swiper {
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+.swiper-slide {
+    width: 500px;
+    height: 250px;
+}
+
+.gameSlider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.gameSlider::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba (0, 0, 0, 0.5);
+    border-radius: 30px !important;
+}
+
+.swiper-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: rgb(74, 72, 72, 0.5);
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    bottom: 0 !important;
+    font-weight: bold;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5em;
+    color: white;
+}
+
+.gameSlider .content {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1000;
+    width: 60%;
+}
+
+.gameSlider .content h2 {
+    font-family: "Bauhaus 93 V1";
+    font-size: 3rem;
+}
+
+.gameSlider .content p {
+    font-size: .8rem;
+    color: #9e9a9a;
+}
+
+.gameSlider .content .buttons {
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.gameSlider .content .buttons a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.gameSlider .content .buttons .orderBtn {
+    background: var(--second);
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+
+.gameSlider .content .buttons .playBtn {
+    height: 50px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.playBtn .play {
+    display: block;
+}
+
+.playBtn .pause {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .play {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .pause {
+    display: block;
+}
+
+.swiper-slide .video iframe {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85%;
+    height: 75%;
+    border-radius: 0 30px 0 30px !important;
+    border: 5px solid transparent;
+    background: var(--second);
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.15), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+    z-index: 1100;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: top right;
+}
+
+.swiper-slide.swiper-slide-active .video.active iframe {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
